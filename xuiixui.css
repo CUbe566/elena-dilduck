@@ -7,12 +7,64 @@
   --rosynight-main: #fc8686;
   --rosynight-main2: #f3aeae;
   --rosynight-message-color: #f3aeae;
+  
+  /* ===== НАСТРОЙКИ ФОНА ===== */
+  /* Замените URL ниже на ссылку на ваше изображение */
+  --background-image-url: url('https://cdn.donmai.us/sample/ce/49/__megumin_kono_subarashii_sekai_ni_shukufuku_wo_drawn_by_luciferteaparty__sample-ce49da81c3f01c218f15b57b7126faab.jpg');
+  
+  /* Прозрачность фона (0 = полностью прозрачный, 1 = непрозрачный) */
+  --background-opacity: 0.85;
+  
+  /* Размытие фона (в пикселях, 0 = без размытия) */
+  --background-blur: 0px;
+  
+  /* Размер фона: cover, contain, auto, или конкретные значения */
+  --background-size: cover;
+  
+  /* Позиция фона: center, top left, 50% 50%, и т.д. */
+  --background-position: center;
+  
+  /* Повторение фона: no-repeat, repeat, repeat-x, repeat-y */
+  --background-repeat: no-repeat;
+  /* ========================= */
+  
   --watermark-filter-invert: 78%;
   --watermark-filter-sepia: 46%;
   --watermark-filter-saturate: 536%;
   --watermark-filter-hue-rotate: 310deg;
   --watermark-filter-brightness: 150%;
   --watermark-filter-contrast: 88%;  
+}
+
+/* ===== ПРИМЕНЕНИЕ ФОНОВОГО ИЗОБРАЖЕНИЯ ===== */
+.appMount__51fd7,
+.bg__960e4,
+.layers__960e4 {
+  background-color: var(--rosynight-app-bg) !important;
+  background-image: var(--background-image-url) !important;
+  background-size: var(--background-size) !important;
+  background-position: var(--background-position) !important;
+  background-repeat: var(--background-repeat) !important;
+  background-attachment: fixed !important;
+}
+
+/* Добавляем слой для контроля прозрачности фона */
+.bg__960e4::before {
+  content: '' !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background-image: var(--background-image-url) !important;
+  background-size: var(--background-size) !important;
+  background-position: var(--background-position) !important;
+  background-repeat: var(--background-repeat) !important;
+  background-attachment: fixed !important;
+  opacity: var(--background-opacity) !important;
+  filter: blur(var(--background-blur)) !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
 }
 
 #app-mount .baseLayer__960e4 {
@@ -1723,4 +1775,3 @@ color: var(--rosynight-main2) !important;
   background-color: var(--rosynight-bg);
   color: var(--rosynight-main2);
 }
-
