@@ -10,7 +10,7 @@
   
   /* ===== НАСТРОЙКИ ФОНА ===== */
   /* ЗАМЕНИТЕ ЭТУ ССЫЛКУ НА ВАШУ КАРТИНКУ */
-  --background-image-url: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1920&q=80');
+  --background-image-url: url('https://cdn.donmai.us/sample/ce/49/__megumin_kono_subarashii_sekai_ni_shukufuku_wo_drawn_by_luciferteaparty__sample-ce49da81c3f01c218f15b57b7126faab.jpg');
   
   /* Прозрачность фона (0 = полностью прозрачный, 1 = непрозрачный) */
   --background-opacity: 0.7;
